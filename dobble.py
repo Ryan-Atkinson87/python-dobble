@@ -18,13 +18,9 @@ animal_dict = {'Card 1':['cow', 'horse', 'pig', 'duck'],
 
 instructions = 'You will be shown two different cards, the cards contain a single matching pair of animals. Type which pair you think are matching'
 
-
-
-    
-
 print(instructions)
-exit = False
 
+exit = False
 while not exit:
     user_input = input('Type "yes" to play, "no" to exit or "i" to see the instructions again: ')
     if user_input == 'yes' or user_input == 'Yes':
@@ -39,14 +35,12 @@ while not exit:
             else:
                 temp_lst = temp_lst + [rand_key]
                 counter = counter -1
-
         # add the values of the 2 random keys from animal_dict to rand_dict
         rand_card1 = temp_lst[0]
         rand_card2 = temp_lst[1]
         rand_dict = {}
         rand_dict[rand_card1] = animal_dict[rand_card1]
         rand_dict[rand_card2] = animal_dict[rand_card2]
-
         # prints the 2 random cards on seperate lines
         line1 = ''
         for item in rand_dict[rand_card1]:
@@ -56,11 +50,24 @@ while not exit:
         for item in rand_dict[rand_card2]:
             line2 = line2 + ' ' + item
         print(rand_card2 + ':' + line2)
-
-
         # check which animal matches
+        animal_match = ''
+        for animal in rand_dict[rand_card1]:
+            if animal in rand_dict[rand_card2]:
+                animal_match = animal
+        #
+        #
         # start timer
+        #
+        #
         answer = input('Which is the matching animal?: ')
+        #
+        #
+        # stop timer
+        #
+        #
+        if answer == animal_match:
+            print('Congratulations, that is correct, it took you *give timer result* seconds!!!')
     elif user_input == 'no' or user_input == 'No':
         exit = True
     elif user_input == 'i' or user_input == 'I':
