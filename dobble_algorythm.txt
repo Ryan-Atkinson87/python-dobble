@@ -1,0 +1,16 @@
+Description:
+Dobble game where a player is shown two sets (cards) of animal names and the player has to say which animal is the same in each set (card)
+A single animal only appears on 2 different cards
+Player can have a timer to let them know how fast they inputted the matching animal
+> ask user when they are ready
+> start timer
+> show 2 random cards
+>> create a list of keys
+>> select a random key
+>> if key is not in temporary list add random key to a temporary list
+>> repeat
+> ask user which animal appears in both lists
+>> if user is correct stop timer, tell them they are correct, tell them how long they took
+>> if user is incorrect, tell them they are incorrect, ask them to try again, repeat until correct
+> ask user if they would like to play again or quit
+

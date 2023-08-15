@@ -22,7 +22,7 @@ print(instructions)
 
 exit = False
 while not exit:
-    user_input = input('Type "yes" to play, "no" to exit or "i" to see the instructions again: ')
+    user_input = input('Would you like to play again? Type "yes" to play, "no" to exit or "i" to see the instructions again: ')
     if user_input == 'yes' or user_input == 'Yes':
         # select 2 random keys from animal_dict
         keys_list = list(animal_dict)
@@ -68,6 +68,8 @@ while not exit:
         #
         if answer == animal_match:
             print('Congratulations, that is correct, it took you *give timer result* seconds!!!')
+        else:
+            print('That is incorrect!!')
     elif user_input == 'no' or user_input == 'No':
         exit = True
     elif user_input == 'i' or user_input == 'I':
